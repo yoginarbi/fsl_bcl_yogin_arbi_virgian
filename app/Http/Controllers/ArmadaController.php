@@ -42,6 +42,10 @@ class ArmadaController extends Controller
     {
         return view('armadas.show', compact('armada'));
     }
+    public function edit(Armada $armada)
+    {
+        return view('armadas.edit', compact('armada'));
+    }
 
     public function update(Request $request, Armada $armada)
     {
