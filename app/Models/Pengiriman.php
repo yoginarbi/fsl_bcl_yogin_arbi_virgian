@@ -11,6 +11,7 @@ class Pengiriman extends Model
     protected $table = 'pengirimans';
     protected $fillable = [
         'no_pengiriman',
+        'pemesanan_id',
         'tgl_kirim',
         'lokasi_asal',
         'lokasi_tujuan',
@@ -21,8 +22,12 @@ class Pengiriman extends Model
 
     protected $casts = [
         'tgl_kirim' => 'datetime',
-        'detail_barang' => 'array',
     ];
+
+    public function pemesanan(): BelongsTo
+    {
+        return $this->belongsTo(Pemesanan::class);
+    }
 
     public function armada(): BelongsTo
     {

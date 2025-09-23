@@ -18,7 +18,6 @@ class Pemesanan extends Model
     ];
 
     protected $casts = [
-        'detail_barang' => 'array',
         'tgl_pemesanan' => 'datetime',
     ];
 

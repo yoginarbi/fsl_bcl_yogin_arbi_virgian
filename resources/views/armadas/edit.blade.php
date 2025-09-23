@@ -30,6 +30,11 @@
         </select>
     </div>
 
-    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Update</button>
+    <div class="flex items-center space-x-3">
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Update</button>
+        <a href="{{ route('armadas.index') }}" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+            Kembali
+        </a>
+    </div>
 </form>
 @endsection
